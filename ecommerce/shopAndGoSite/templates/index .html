@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Analytics</title>
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" https://fonts.googleapis.com/css?family=Lora">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="static/css/styles.min.css">
+
+</head>
+
+<body class="container">
+    
+   
+        <form action="signup" method="POST">
+        	{% csrf_token %} 
+        	 
+                <input type="text" name="username" placeholder="Enter your username">
+            	<input type="submit" name="signup" value="signup" class="btn btn-success">
+            	<!-- <input type="submit" name="multiNB" value="Multinomial Naive Bayes" class="btn btn-success">
+            	<input type="submit" name="rf" value="Random Forest" class="btn btn-success">  -->
+        
+         
+        </form>
+        
+    <div class="article-clean"></div>
+    <div></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
