@@ -24,7 +24,8 @@
 <body>
     <div class="login-dark">
         <h1 class="text-center" style="color:rgb(255,255,255);font-family:Adamina, serif;padding:167px;">Shop &amp; Go</h1>
-        <form method="post">
+        {{ msg }}
+        <form action = "homepage" method="post">
             {% csrf_token %} 
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
