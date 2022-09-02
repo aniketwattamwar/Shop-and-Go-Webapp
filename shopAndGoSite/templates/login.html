@@ -22,10 +22,13 @@
 </head>
 
 <body>
+    
+        
     <div class="login-dark">
         <h1 class="text-center" style="color:rgb(255,255,255);font-family:Adamina, serif;padding:167px;">Shop &amp; Go</h1>
-        {{ msg }}
+        
         <form action = "homepage" method="post">
+            {{ msg }}
             {% csrf_token %} 
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
@@ -34,8 +37,8 @@
             <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button><button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(230,241,255);color:rgb(38,74,128);margin-top:13px;">Sign Up</button></div><a href="#"
                 class="forgot">Forgot your email or password?</a></form>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
