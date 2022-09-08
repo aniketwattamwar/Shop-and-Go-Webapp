@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from shopAndGoApp import models
-
+import json
 
 # Create your views here.
 def home(request):
@@ -27,17 +27,18 @@ def get_data(request):
     msg = "Account created. Please login with your account details."
     return render(request, 'login.html', {'msg': msg})
 
+data = json.load(open('/Users/csuftitan/Documents/Projects/Shop-and-Go-Webapp/shopAndGoSite/shopAndGoApp/data.json', 'r'))
+print(data)
 def login_data(request):
-
+    
     email = request.POST['email']
     password = request.POST['password']
     #check the entry in the database
-    user_data = models.get_details()
-    print(user_data)
-    for user in user_data:
-        if email == user[3] and password == user[4]:
-            return render(request, 'homepage.html', {'name': user[1]})
-    
-    return "User does not exist"
-
+    # user_data = models.get_details()
+    # print(user_data)
+    # for user in user_data:
+    #     if email == user[3] and password == user[4]:
+    #         return render(request, 'homepage.html', {'name': user[1]})
+    return render(request, "homepage.html", {'data': data})
+    # return "User does not exist"
 

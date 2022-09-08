@@ -1,0 +1,64 @@
+[
+  
+    {
+      "id": 1,
+      "name": "iphone 5",
+      "price": 900,
+      "qty": 2
+    },
+    {
+      "id": 2,
+      "name": "iphone 6",
+      "price": 900,
+      "qty": 2
+    },
+    {
+      "id": 3,
+      "name": "iphone 7",
+      "price": 900,
+      "qty": 2
+    },
+    {
+      "id": 4,
+      "name": "iphone 8",
+      "price": 900,
+      "qty": 2
+    },
+    {
+      "id": 5,
+      "name": "iphone 9",
+      "price": 900,
+      "qty": 2
+    },
+    {
+      "id": 1,
+      "name": "iphone 10",
+      "price": 900,
+      "qty": 2
+    },
+    {
+      "id": 2,
+      "name": "iphone 11",
+      "price": 900,
+      "qty": 2
+    },
+    {
+      "id": 3,
+      "name": "iphone 12",
+      "price": 900,
+      "qty": 2
+    },
+    {
+      "id": 4,
+      "name": "iphone 13",
+      "price": 900,
+      "qty": 2
+    },
+    {
+      "id": 5,
+      "name": "iphone 14",
+      "price": 900,
+      "qty": 2
+    }
+  
+  ]
