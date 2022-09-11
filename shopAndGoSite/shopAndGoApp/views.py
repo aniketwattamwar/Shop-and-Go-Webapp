@@ -42,3 +42,5 @@ def login_data(request):
     return render(request, "homepage.html", {'data': data})
     # return "User does not exist"
 
+def payment(request):
+    return render(request, "payment.html")

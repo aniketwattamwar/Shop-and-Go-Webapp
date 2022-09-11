@@ -32,8 +32,37 @@
 </head>
 
 <body class="container">
+    <h2> Order Details </h2>
+    <hr>
     
-    
+    <div class="row">
+        
+        <div class="col-sm-6">
+            <form action="address" method="post">
+                {% csrf_token %} 
+                <h3> Add Address</h3>
+               <div class="form-group"> <input class="form-control" type="text" name="adr1" placeholder="Address Line 1"></div>
+                <div class="form-group"> <input class="form-control" type="text"  name="adr2" placeholder="Address Line 2"></div>
+                <input class="btn btn-primary" type="submit" name="addAdress" value="Add">
+            </form>
+        </div>
+        <div class="col-sm-6">
+            <form action="payment" method="post">
+                {% csrf_token %} 
+                <h3> Add Payment method</h3>
+                <div class="form-group"> <input class="form-control" type="text"  name="adr2" placeholder="Name on Card"></div>
+                <div class="form-group"> <input class="form-control" type="text" name="adr1" placeholder="Card Number"></div>
+                <div class="form-group"> <input class="form-control" type="date"  name="adr2" placeholder="Expiry Date"></div>
+                 <div class="form-group"> <input class="form-control" type="text"  name="adr2" placeholder="CVV"></div>
+                 <input class="btn btn-primary" type="submit" name="addAdress" value="Add Payment method">
+            </form>
+        </div>
+
+    </div>
+    <hr>
+    <div class="col-md-3">
+        <button type="submit" class="btn btn-primary"> Pay Now</button>
+    </div>
 
     <script src="static/js/jquery.min.js"></script>
     <script src="static/bootstrap/js/bootstrap.min.js"></script>

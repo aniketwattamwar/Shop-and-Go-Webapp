@@ -85,7 +85,11 @@
                   <h3 class="name">{{ d.name }} </h3>
                   <p id="price"> $ {{ d.price }} </p>
                   <!-- <p> {{ d.qty }}</p> -->
-                  <button class="btn btn-primary" type="submit"> Buy Now </button>
+                  <form action="payment" method="post">
+                    {% csrf_token %} 
+                    <button class="btn btn-primary" type="submit"> Buy Now </button>
+                  </form>
+                  
                   
             </div>
             {% endfor %}
