@@ -3,4 +3,4 @@
 
 ![github](ConceptMap.png)
 
-![github](Shop&Go.drawio.png)
+![github](architecture.png)
