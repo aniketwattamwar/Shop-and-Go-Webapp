@@ -1,2 +1,4 @@
 # Shop-and-Go-Webapp
-Test readme
+
+
+![github](ConceptMap.png)
