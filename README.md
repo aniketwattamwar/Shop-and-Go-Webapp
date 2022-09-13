@@ -2,4 +2,4 @@
 
 
 ![github](ConceptMap.png)
-![github](architecture.png)
+![github](architecture.jpg)
