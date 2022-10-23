@@ -33,7 +33,9 @@
 
 <body class="container">
     
+    <!-- <h4>{{ session_data }}</h4> -->
     <div>
+
     <div class="header-blue">
         <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
             <div class="container"><a class="navbar-brand" href="#">Shop &amp; Go</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -77,13 +79,13 @@
               <p class="text-center">Offer ends soon! </p>
           </div>
        
-          
+          {{product_data}}
           <div class="row articles">
-            {% for d in data %}
+            {% for d in product_data %}
               <div class="col-sm-6 col-md-4 item">
-                <a href="#"><img class="img-fluid" src="static/img/phone.png"></a>
-                  <h3 class="name">{{ d.name }} </h3>
-                  <p id="price"> $ {{ d.price }} </p>
+                <a href="#"><img class="img-fluid" src=""></a>
+                  <h3 class="name">{{ d.product_name }} </h3>
+                  <p id="price"> $ {{ d.product_price }} </p>
                   <!-- <p> {{ d.qty }}</p> -->
                   <form action="payment" method="post">
                     {% csrf_token %} 

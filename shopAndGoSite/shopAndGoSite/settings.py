@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-nk#bwme!w#tz!q69&z8g7$+5_w1l_a8!r$m*sn*=f%(rxpaze)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shopandgoenv.eba-22pxypmt.us-west-2.elasticbeanstalk.com','127.0.0.1']
 
 
 # Application definition
@@ -73,11 +73,23 @@ WSGI_APPLICATION = 'shopAndGoSite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# if 'RDS_DB_NAME' in os.environ:
+#     DATABASES = { 
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': os_environ['RDS_DB_NAME'],
+#             'USER': os_environ['RDS_USERNAME'],
+#             'PASSWORD': os_environ['RDS_PASSWORD'],
+#             'HOST': os_environ['RDS_HOSTNAME'],
+#             'PORT': os_environ['RDS_PORT'],
+#         }   
+#     }
+# else:
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        }
 }
 
 
@@ -122,6 +134,7 @@ STATICFILES_DIRS = [
         ]
 
 STATIC_ROOT = os.path.join(BASE_DIR,'assets')
+# STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
