@@ -35,7 +35,7 @@
     
     <!-- <h4>{{ session_data }}</h4> -->
     <div>
-
+        <h2> Welcome {{ name }}</h2>
     <div class="header-blue">
         <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
             <div class="container"><a class="navbar-brand" href="#">Shop &amp; Go</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -53,6 +53,11 @@
                     </form>
                     <i class="fas fa-user fa-lg"></i>
                     <i class="fa badge fa-lg" value=8>&#xf07a;</i>
+                    <form action="logout" method="post">
+                        {% csrf_token %} 
+                        <input type="submit" name="logout" value="Logout">
+                    </form>
+                   
                     
                 </div>
         </nav>
@@ -71,7 +76,6 @@
     </div>
 </div>
 </div>
-
     <div class="article-list">
       <div class="container">
           <div class="intro">
@@ -79,20 +83,18 @@
               <p class="text-center">Offer ends soon! </p>
           </div>
        
-          {{product_data}}
           <div class="row articles">
+            <!-- *** -->
             {% for d in product_data %}
               <div class="col-sm-6 col-md-4 item">
-                <a href="#"><img class="img-fluid" src=""></a>
-                  <h3 class="name">{{ d.product_name }} </h3>
-                  <p id="price"> $ {{ d.product_price }} </p>
-                  <!-- <p> {{ d.qty }}</p> -->
+                <a href="#"><img class="img-fluid" src='/static/img/iphone.png'></a>
+                  <h3 class="name">{{ d.1 }} </h3>
+                  <p id="price"> $ {{ d.2 }} </p>
+                  
                   <form action="payment" method="post">
                     {% csrf_token %} 
                     <button class="btn btn-primary" type="submit"> Buy Now </button>
                   </form>
-                  
-                  
             </div>
             {% endfor %}
         </div>
