@@ -4,12 +4,10 @@ from django.shortcuts import render
 from shopAndGoApp import models
 import json
 import requests
-session = requests.Session()
 
 # session.get(followingurl)
 # session.post(followingurl)
-
-
+sess = {}
 # Create your views here.
 def home(request):
     return render(request,"index.html")
@@ -38,20 +36,27 @@ def login_data(request):
     password = request.POST['password']
     #check the entry in the database
     user_data = models.get_details(password)
+    # sess = request.session.get('user',user_data) 
+    request.session['user'] = user_data
     product_data = models.get_product_data()
-    if user_data:
+    
+    if request.session['user']:
         return render(request, 'homepage.html', {'name': user_data[0][1],'product_data': product_data})
     
 
 def logout(request):
 
-    sess_name = request.session.get('session_data')
-    del request.session[sess_name]
-
-
+    # sess_name = request.session.get('session_data', sess)
+    # del request.session['user']
+    msg = "Logged out"
+    try:
+        del request.session['user']
+    except KeyError:
+        pass
     return render(request,'index.html')
 
 def payment(request):
+
     return render(request, "payment.html")
 
 
@@ -85,12 +90,12 @@ def review(request):
     review = []
     user_id = 1
     product_id = 1
-    review.append(models.get_address(user_id))
-    review.append(models.get_payment(user_id))
-    review.append(models.get_ordered_product(product_id))
-    print(review)
+    address = models.get_address(user_id)
+    payment = models.get_payment(user_id)
+    ordered_product = models.get_ordered_product(product_id)
+    
 
-    return render(request,'payment.html',{'review':review})
+    return render(request,'payment.html',{'address':address,'payment':payment,'ordered_product':ordered_product})
 
 
 

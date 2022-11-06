@@ -63,11 +63,21 @@
     </div>
     <hr>       
         
-        <form action="addpayment/review" method="post">
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Review and Pay</button>
+        <form action="review" method="post">
+            {% csrf_token %} 
+        <button type="submit" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Review</button>
         </form>
         <h6>
-            {{ review }}
+            Verify Address
+            {{ address.1}}
+        </h6>
+
+        <h6>
+            Final Amount to be paid
+            {{payment.2}}
+        </h6>
+        <h6>
+            Product Name: {{ordered_product.1}}
         </h6>
           
 <!--          
