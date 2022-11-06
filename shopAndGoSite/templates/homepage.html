@@ -90,7 +90,6 @@
                 <a href="#"><img class="img-fluid" src='/static/img/iphone.png'></a>
                   <h3 class="name">{{ d.1 }} </h3>
                   <p id="price"> $ {{ d.2 }} </p>
-                  
                   <form action="payment" method="post">
                     {% csrf_token %} 
                     <button class="btn btn-primary" type="submit"> Buy Now </button>
@@ -98,8 +97,6 @@
             </div>
             {% endfor %}
         </div>
-
-            
         </div>
   </div>
 

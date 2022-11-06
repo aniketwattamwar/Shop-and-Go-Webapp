@@ -83,7 +83,7 @@ def get_ordered_product(product_id):
 #   PRIMARY KEY (`order_id`));
 
 
-# CREATE TABLE `ebdb`.`new_table` (
+# CREATE TABLE `ebdb`.`ebdb` (
 #   `user_id` INT NOT NULL AUTO_INCREMENT,
 #   `firstname` VARCHAR(45) NULL,
 #   `lastname` VARCHAR(45) NULL,
